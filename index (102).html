@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Advanced trading infrastructure. Real time market intelligence. A smarter way to navigate digital markets.">
+  <meta name="locale" content="en">
+  <meta name="content-language" content="en">
+  <!-- Temporary concept prototype: Tesla × SpaceX visual identity applied to Bell Invest.
+       Not affiliated with or endorsed by Tesla, Inc. or SpaceX. See README.md. -->
+  <title>Home | Tesla × SpaceX</title>
+  <link rel="icon" href="/assets/brand/tesla-emblem.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="/assets/img/hero-desktop.jpg" media="(min-width: 769px)" fetchpriority="high">
+  <link rel="preload" as="image" href="/assets/img/hero-mobile.jpg" media="(max-width: 768px)" fetchpriority="high">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body data-brand-title="home">
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+
+      <!-- Brand lockup: Tesla | SpaceX -->
+      <a class="brand-lockup" href="/" aria-label="Home">
+        <img class="brand-lockup__img" data-brand="primary" data-brand-field="logo"
+             src="/assets/brand/tesla-wordmark.svg" alt="Tesla" width="120" height="16">
+        <span class="brand-lockup__divider" aria-hidden="true"></span>
+        <img class="brand-lockup__img" data-brand="secondary" data-brand-field="logo"
+             src="/assets/brand/spacex-wordmark.svg" alt="SpaceX" width="120" height="16">
+      </a>
+
+      <!-- Centre links -->
+      <nav class="nav__links" aria-label="Primary">
+        <a class="nav__link" href="/" aria-current="page">Home</a>
+        <a class="nav__link" href="/markets/">Markets</a>
+        <a class="nav__link" href="#features">Features</a>
+        <a class="nav__link" href="/contact/">Contact</a>
+      </nav>
+
+      <!-- Actions -->
+      <div class="nav__actions">
+        <a class="nav__signin" href="https://bellbroker.ojojoarmanitech.com/login">Sign In</a>
+        <a class="btn btn--solid nav__cta" href="https://bellbroker.ojojoarmanitech.com/register">Get Started</a>
+      </div>
+
+      <!-- Mobile burger -->
+      <button class="nav__burger" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle menu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <!-- Mobile panel -->
+    <div class="nav__mobile" id="mobile-menu">
+      <a class="nav__mlink" href="/" aria-current="page">Home</a>
+      <a class="nav__mlink" href="/markets/">Markets</a>
+      <a class="nav__mlink" href="#features">Features</a>
+      <a class="nav__mlink" href="/contact/">Contact</a>
+      <div class="nav__mobile-actions">
+        <a class="btn btn--ghost" href="https://bellbroker.ojojoarmanitech.com/login">Sign In</a>
+        <a class="btn btn--solid" href="https://bellbroker.ojojoarmanitech.com/register">Get Started</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ==================== HERO ==================== -->
+    <section class="hero" aria-label="Introduction">
+      <div class="hero__media">
+        <picture>
+          <source media="(max-width: 768px)" srcset="/assets/img/hero-mobile.jpg">
+          <img src="/assets/img/hero-desktop.jpg"
+               alt="A Tesla vehicle parked before a Starship rocket on the launch pad at night"
+               fetchpriority="high" width="1672" height="941">
+        </picture>
+      </div>
+      <div class="hero__scrim" aria-hidden="true"></div>
+
+      <div class="container hero__content">
+        <h1 class="hero__title">
+          <span class="line"><span>Trade the future.</span></span>
+          <span class="line"><span>Without limits.</span></span>
+        </h1>
+        <p class="hero__sub">
+          Advanced trading infrastructure. Real time market intelligence.
+          A smarter way to navigate digital markets.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--solid" href="https://bellbroker.ojojoarmanitech.com/user/trading">
+            Start Trading
+            <svg class="btn__arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a class="btn btn--ghost" href="#features">Explore Platform</a>
+        </div>
+      </div>
+
+      <!-- Live tape -->
+      <div class="hero__tape">
+        <div class="container tape__inner">
+          <span class="tape__live"><span class="tape__dot" aria-hidden="true"></span>Live</span>
+
+          <a class="tape__item" id="tape-btc" href="https://bellbroker.ojojoarmanitech.com/user/trading/trade/BTCUSDT">
+            <span class="tape__sym">BTC</span>
+            <span class="tape__px u-tabular">$43,567.84</span>
+            <span class="tape__chg u-tabular is-up">+2.45%</span>
+          </a>
+          <span class="tape__sep" aria-hidden="true"></span>
+
+          <a class="tape__item" id="tape-spacex" href="https://bellbroker.ojojoarmanitech.com/user/trading">
+            <img class="tape__logo" src="/assets/brand/spacex-wordmark.svg" alt="SpaceX" width="98" height="12">
+            <span class="tape__px u-tabular">$248.75</span>
+            <span class="tape__chg u-tabular is-up">+1.86%</span>
+          </a>
+          <span class="tape__sep" aria-hidden="true"></span>
+
+          <a class="tape__item" id="tape-tesla" href="https://bellbroker.ojojoarmanitech.com/user/trading">
+            <img class="tape__logo" src="/assets/brand/tesla-wordmark.svg" alt="Tesla" width="92" height="12">
+            <span class="tape__px u-tabular">$312.40</span>
+            <span class="tape__chg u-tabular is-down">−0.74%</span>
+          </a>
+          <span class="tape__sep" aria-hidden="true"></span>
+
+          <a class="tape__item" id="tape-usdt" href="https://bellbroker.ojojoarmanitech.com/user/trading">
+            <span class="tape__sym">USDT</span>
+            <span class="tape__px u-tabular">$1.00</span>
+            <span class="tape__chg u-tabular is-up">+0.01%</span>
+          </a>
+
+          <span class="tape__spacer" aria-hidden="true"></span>
+          <a class="tape__all" href="/markets/">View all markets →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== STATS ==================== -->
+    <section class="stats" aria-label="Platform statistics">
+      <div class="container stats__grid">
+        <div class="stats__item">
+          <div class="stats__value" data-count="2.4" data-decimals="1" data-prefix="$" data-suffix="B+">$2.4B+</div>
+          <div class="stats__label">Trading Volume</div>
+        </div>
+        <div class="stats__item">
+          <div class="stats__value" data-count="150" data-suffix="K+">150K+</div>
+          <div class="stats__label">Active Traders</div>
+        </div>
+        <div class="stats__item">
+          <div class="stats__value" data-count="100" data-suffix="+">100+</div>
+          <div class="stats__label">Trading Pairs</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== POPULAR MARKETS ==================== -->
+    <section class="section" id="markets" aria-labelledby="markets-title">
+      <div class="container">
+        <div class="section__head reveal">
+          <div>
+            <p class="eyebrow"><span class="eyebrow__tick" aria-hidden="true"></span>01 — Markets</p>
+            <h2 class="section__title" id="markets-title">Popular Markets</h2>
+            <p class="section__sub">Trade the world's top cryptocurrencies with advanced tools and real-time intelligence.</p>
+          </div>
+          <div class="markets__aside">
+            <span class="spec__label">24h Volume</span>
+            <span class="spec__value u-tabular">$1.2B</span>
+          </div>
+        </div>
+
+        <div class="terminal reveal" data-delay="1">
+          <div class="terminal__bar">
+            <span class="terminal__live"><span class="tape__dot" aria-hidden="true"></span>Live</span>
+            <span class="terminal__meta">USDT pairs · refresh 60s</span>
+            <a class="terminal__link" href="/markets/">Full market list →</a>
+          </div>
+
+          <!-- column heads -->
+          <div class="mrow mrow--head" aria-hidden="true">
+            <span>Asset</span>
+            <span class="num">Price</span>
+            <span class="num">24h</span>
+            <span class="num vol">Volume</span>
+            <span class="num">7d</span>
+            <span></span>
+          </div>
+
+          <!-- Bitcoin -->
+          <div class="mrow">
+            <a class="mrow__asset" href="https://bellbroker.ojojoarmanitech.com/user/trading/trade/BTCUSDT">
+              <img class="mrow__icon" src="https://assets.coingecko.com/coins/images/1/large/bitcoin.png" alt="" width="34" height="34" loading="lazy">
+              <span class="mrow__names">
+                <span class="mrow__name">Bitcoin</span>
+                <span class="mrow__sym">BTC/USDT</span>
+              </span>
+            </a>
+            <span class="mrow__price is-up" id="btc-market-price">$43,567.84</span>
+            <span class="mrow__chg is-up" id="btc-market-change">+2.45%</span>
+            <span class="mrow__vol" id="btc-market-volume">24h Volume: $542M</span>
+            <span class="mrow__spark"><svg data-spark="btc" role="img" aria-label="Bitcoin 7 day trend"></svg></span>
+            <span class="mrow__action">
+              <a class="btn btn--ghost btn--small" href="https://bellbroker.ojojoarmanitech.com/user/trading/trade/BTCUSDT">Trade</a>
+            </span>
+          </div>
+
+          <!-- SpaceX -->
+          <div class="mrow">
+            <a class="mrow__asset" href="https://bellbroker.ojojoarmanitech.com/user/trading">
+              <img class="mrow__logo" src="/assets/brand/spacex-wordmark.svg" alt="SpaceX" width="89" height="11">
+              <span class="mrow__names">
+                <span class="mrow__name">SpaceX</span>
+                <span class="mrow__sym">SPACEX/USDT</span>
+              </span>
+            </a>
+            <span class="mrow__price is-up" id="spacex-market-price">$248.75</span>
+            <span class="mrow__chg is-up" id="spacex-market-change">+1.86%</span>
+            <span class="mrow__vol" id="spacex-market-volume">24h Volume: $86M</span>
+            <span class="mrow__spark"><span class="mrow__nodata" aria-label="No trend data available">—</span></span>
+            <span class="mrow__action">
+              <a class="btn btn--ghost btn--small" href="https://bellbroker.ojojoarmanitech.com/user/trading">Trade</a>
+            </span>
+          </div>
+
+          <!-- Tesla -->
+          <div class="mrow">
+            <a class="mrow__asset" href="https://bellbroker.ojojoarmanitech.com/user/trading">
+              <img class="mrow__logo" src="/assets/brand/tesla-wordmark.svg" alt="Tesla" width="85" height="11">
+              <span class="mrow__names">
+                <span class="mrow__name">Tesla</span>
+                <span class="mrow__sym">TSLA/USDT</span>
+              </span>
+            </a>
+            <span class="mrow__price is-down" id="tesla-market-price">$312.40</span>
+            <span class="mrow__chg is-down" id="tesla-market-change">−0.74%</span>
+            <span class="mrow__vol" id="tesla-market-volume">24h Volume: $142M</span>
+            <span class="mrow__spark"><span class="mrow__nodata" aria-label="No trend data available">—</span></span>
+            <span class="mrow__action">
+              <a class="btn btn--ghost btn--small" href="https://bellbroker.ojojoarmanitech.com/user/trading">Trade</a>
+            </span>
+          </div>
+
+          <!-- Tether -->
+          <div class="mrow">
+            <a class="mrow__asset" href="https://bellbroker.ojojoarmanitech.com/user/trading">
+              <img class="mrow__icon" src="https://assets.coingecko.com/coins/images/325/large/Tether.png" alt="" width="34" height="34" loading="lazy">
+              <span class="mrow__names">
+                <span class="mrow__name">Tether</span>
+                <span class="mrow__sym">USDT</span>
+              </span>
+            </a>
+            <span class="mrow__price is-up" id="usdt-market-price">$1.00</span>
+            <span class="mrow__chg is-up" id="usdt-market-change">+0.01%</span>
+            <span class="mrow__vol" id="usdt-market-volume">24h Volume: —</span>
+            <span class="mrow__spark"><svg data-spark="usdt" role="img" aria-label="Tether 7 day trend"></svg></span>
+            <span class="mrow__action">
+              <a class="btn btn--ghost btn--small" href="https://bellbroker.ojojoarmanitech.com/user/trading">Trade</a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FEATURES ==================== -->
+    <section class="section section--line" id="features" aria-labelledby="features-title">
+      <div class="container">
+        <div class="section__head reveal">
+          <div>
+            <p class="eyebrow"><span class="eyebrow__tick" aria-hidden="true"></span>02 — Platform</p>
+            <h2 class="section__title" id="features-title">Advanced technology.<br>Precise execution.</h2>
+            <p class="section__sub">Everything you need to trade with confidence — engineered as one system.</p>
+          </div>
+        </div>
+
+        <div class="features__grid reveal" data-delay="1">
+
+          <!-- Primary: live advanced chart -->
+          <article class="fcell fcell--primary">
+            <div class="fcell__head">
+              <p class="fcell__index"><b>01</b> / 06</p>
+              <h3 class="fcell__title">Advanced Charts</h3>
+              <p class="fcell__copy">Professional trading charts with multiple timeframes and indicators — the same institutional-grade interface, live on this page.</p>
+            </div>
+            <div class="fcell__chart">
+              <div id="tradingview_widget" role="img" aria-label="Live BTC/USDT daily chart"></div>
+            </div>
+          </article>
+
+          <!-- Side cells -->
+          <article class="fcell fcell--side">
+            <p class="fcell__index"><b>02</b> / 06</p>
+            <h3 class="fcell__title">Algorithmic Trading</h3>
+            <p class="fcell__copy">Build and deploy custom algorithms for faster, more precise trading.</p>
+          </article>
+
+          <article class="fcell fcell--side">
+            <p class="fcell__index"><b>03</b> / 06</p>
+            <h3 class="fcell__title">Secure Wallet</h3>
+            <p class="fcell__copy">Industry-leading security measures to protect your digital assets.</p>
+          </article>
+
+          <!-- Bottom row -->
+          <article class="fcell fcell--third">
+            <p class="fcell__index"><b>04</b> / 06</p>
+            <h3 class="fcell__title">Lightning-Fast Execution</h3>
+            <p class="fcell__copy">Execute trades in milliseconds with our cutting-edge infrastructure.</p>
+            <p class="fcell__spec u-tabular"><small>Trade speed</small>0.002s</p>
+          </article>
+
+          <article class="fcell fcell--third">
+            <p class="fcell__index"><b>05</b> / 06</p>
+            <h3 class="fcell__title">Multi-Currency Support</h3>
+            <p class="fcell__copy">Trade BTC, ETH, LTC, and a growing list of top crypto assets.</p>
+            <p class="fcell__spec u-tabular"><small>Trading pairs</small>100+</p>
+          </article>
+
+          <article class="fcell fcell--third">
+            <p class="fcell__index"><b>06</b> / 06</p>
+            <h3 class="fcell__title">24/7 Support</h3>
+            <p class="fcell__copy">Get help anytime with our round-the-clock customer service.</p>
+            <p class="fcell__spec"><small>Availability</small>24/7</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TECHNOLOGY STATEMENT ==================== -->
+    <section class="tech" aria-labelledby="tech-title">
+      <div class="tech__media">
+        <img src="/assets/img/artemis-4.jpg"
+             alt="Heavy-lift launch vehicle lifting off from the pad at night"
+             loading="lazy" width="1920" height="767">
+      </div>
+      <div class="tech__scrim" aria-hidden="true"></div>
+      <div class="container tech__content">
+        <p class="eyebrow reveal"><span class="eyebrow__tick" aria-hidden="true"></span>03 — Infrastructure</p>
+        <h2 class="tech__title reveal" data-delay="1" id="tech-title">The next generation of digital trading infrastructure.</h2>
+        <p class="tech__copy reveal" data-delay="2">Built for precision. Engineered for scale. Designed to keep you ahead of the market.</p>
+      </div>
+    </section>
+
+    <!-- ==================== FINAL CTA ==================== -->
+    <section class="cta" aria-labelledby="cta-title">
+      <img class="cta__emblem" src="/assets/brand/tesla-emblem.svg" alt="" aria-hidden="true">
+      <div class="container cta__inner">
+        <p class="eyebrow reveal"><span class="eyebrow__tick" aria-hidden="true"></span>04 — Get started</p>
+        <h2 class="cta__title reveal" data-delay="1" id="cta-title">Your next move starts here.</h2>
+        <p class="cta__copy reveal" data-delay="2">Join Bell Invest and access advanced tools for navigating digital markets.</p>
+        <a class="btn btn--solid reveal" data-delay="3" href="https://bellbroker.ojojoarmanitech.com/register">
+          Create Your Account
+          <svg class="btn__arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a class="brand-lockup" href="/" aria-label="Home">
+            <img class="brand-lockup__img" data-brand="primary" data-brand-field="logo"
+                 src="/assets/brand/tesla-wordmark.svg" alt="Tesla" width="130" height="17">
+            <span class="brand-lockup__divider" aria-hidden="true"></span>
+            <img class="brand-lockup__img" data-brand="secondary" data-brand-field="logo"
+                 src="/assets/brand/spacex-wordmark.svg" alt="SpaceX" width="130" height="17">
+          </a>
+          <p class="footer__tagline">Advanced trading infrastructure for digital markets.</p>
+          <div class="footer__contact">
+            <a href="mailto:support@domain.com">support@domain.com</a>
+            <a href="tel:+15551234567">+1 (555) 123-4567</a>
+            <span>123 Crypto Street, Block 42, New York, NY, USA</span>
+          </div>
+          <div class="footer__social">
+            <a href="#" aria-label="Twitter">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 1.2h3.7l-8.1 9.3L24 22.8h-7.5l-5.9-7.7-6.7 7.7H.2l8.7-9.9L0 1.2h7.7l5.3 7 6-7zm-1.3 19.4h2L6.6 3.3H4.4l13.2 17.3z"/></svg>
+            </a>
+            <a href="#" aria-label="Telegram">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.1 3.2 1.9 11.4c-1.4.6-1.4 1.4-.2 1.8l5.4 1.7 2.1 6.4c.2.7.1.9.8.9.5 0 .8-.3 1.1-.6l2.7-2.6 5.6 4.1c1 .6 1.8.3 2-1l3.7-17.4c.4-1.6-.6-2.4-1.7-1.9zM8.6 14.7l9.6-6c.5-.3.9-.1.6.2l-8.2 7.4-.3 3.4-1.7-5z"/></svg>
+            </a>
+            <a href="#" aria-label="Discord">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3l-.2.5c1.7.4 3.2 1.1 4.5 2a16.6 16.6 0 0 0-14.4 0c1.3-.9 2.9-1.6 4.5-2L9.6 3a19.7 19.7 0 0 0-4.9 1.4C2 8.6 1.3 12.7 1.6 16.7a20 20 0 0 0 6 3l.7-1.1c-.7-.3-1.4-.6-2-1.1l.5-.4a14.2 14.2 0 0 0 12.2 0l.5.4c-.6.5-1.3.8-2 1.1l.7 1.1a19.9 19.9 0 0 0 6-3c.4-4.7-.6-8.7-3.9-12.3zM8.7 14.2c-1 0-1.7-.9-1.7-2s.8-2 1.7-2 1.8.9 1.7 2c0 1.1-.8 2-1.7 2zm6.6 0c-1 0-1.7-.9-1.7-2s.8-2 1.7-2 1.8.9 1.7 2c0 1.1-.7 2-1.7 2z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="#">Exchange</a></li>
+            <li><a href="https://bellbroker.ojojoarmanitech.com/user/trading">Trading</a></li>
+            <li><a href="#">Wallet</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Documentation</a></li>
+            <li><a href="/contact/">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Security</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span data-brand-copyright>© 2026 Tesla × SpaceX. All rights reserved.</span>
+        <span class="footer__disclaimer">Temporary concept prototype. Not an official Tesla or SpaceX website.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://s3.tradingview.com/tv.js"></script>
+  <script src="/assets/brand/brand.js"></script>
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/home.js"></script>
+</body>
+</html>
